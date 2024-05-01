@@ -1,7 +1,7 @@
 package org.example;
 
 import lombok.RequiredArgsConstructor;
-import org.example.info.Info;
+import org.example.model.Info;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
