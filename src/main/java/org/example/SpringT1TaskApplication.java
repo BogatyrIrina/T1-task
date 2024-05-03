@@ -5,6 +5,7 @@ import org.example.model.Info;
 import org.example.model.Plant;
 import org.example.service.PlantService;
 import org.example.utils.ThreadUtils;
+import org.example.utils.UserContext;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
@@ -28,6 +29,8 @@ public class SpringT1TaskApplication {
     @EventListener(ApplicationReadyEvent.class)
     public void onReady(){
 //        info.info();
+
+        UserContext.setUsername("user");
         plantService.addPlant(new Plant("Роза", "Цветок"));
 
         ThreadUtils.waitTime(200);

@@ -11,12 +11,11 @@ import org.springframework.stereotype.Component;
 @Slf4j
 public class LoggingAspect {
 
-    @Around("bean")
+    @Around("bean(plantService)")
     public Object around(ProceedingJoinPoint joinPoint) throws Throwable {
         long startTime = System.currentTimeMillis();
 
         String methodName = joinPoint.getSignature().getName();
-
         Object [] methodArgs = joinPoint.getArgs();
 
         log.info("Выполнение метода {} с аргументами {}", methodName, methodArgs);

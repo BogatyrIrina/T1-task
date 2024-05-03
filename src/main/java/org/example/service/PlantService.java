@@ -1,8 +1,12 @@
 package org.example.service;
 
 import org.example.annotation.Asynchronously;
+import org.example.annotation.PreInvoke;
+import org.example.annotation.SuccessLogging;
+import org.example.annotation.Valid;
 import org.example.model.Plant;
 import org.example.model.PlantException;
+import org.example.model.RoleType;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
@@ -12,28 +16,33 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 @Service
+@SuccessLogging
 public class PlantService {
 
     private final Map<String, Plant> plants = new HashMap<>();
 
     @Asynchronously
-    public void addPlant(Plant plant){
+    @PreInvoke(roles = RoleType.ADMIN)
+    public void addPlant(@Valid Plant plant){
         plants.put(plant.getName(), plant);
     }
 
     @Asynchronously
-    public void addPlants(List<Plant> newPlants){
+    @PreInvoke(roles = RoleType.ADMIN)
+    public void addPlants(@Valid List<Plant> newPlants){
         if (newPlants.size() ==1){
             throw new PlantException("Используйте метод addPlant(Plant plant)");
         }
         plants.putAll(newPlants.stream().collect(Collectors.toMap(Plant::getName, Function.identity())));
     }
 
+    @PreInvoke(roles = {RoleType.ADMIN, RoleType.USER})
     public Plant getPlantByName(String name) {
         return plants.get(name);
     }
 
+    @PreInvoke(roles = {RoleType.ADMIN, RoleType.USER})
     public List<Plant> getPlantByType(String type) {
-        return plants.values().stream().filter(plant -> plant.getType().equals(type)).collect(Collectors.toList());
+        return plants.values().stream().filter(plant -> plant.getType().equals(type)).toList();
     }
 }

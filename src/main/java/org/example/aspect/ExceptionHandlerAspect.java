@@ -13,8 +13,8 @@ import org.springframework.stereotype.Component;
 @Order(1)
 public class ExceptionHandlerAspect {
 
-    @AfterThrowing(pointcut = "withing(com.example.springt1task.service.*) &&" +
-            " execution(* * (..)) throws @com.example.springt1task.annotation.Throw *)", throwing = "exeption")
+    @AfterThrowing(pointcut = "withing(org.example.springt1task.service.*) &&" +
+            " execution(* * (..)) throws @org.example.springt1task.annotation.Throw *)", throwing = "exeption")
     public void afterThrowing(JoinPoint joinPoint, Exception exception){
         log.info("Произошла ошибка при вызове метода {}", joinPoint.getSignature().toShortString());
         log.info("Ошибка: {}", exception.getMessage());
