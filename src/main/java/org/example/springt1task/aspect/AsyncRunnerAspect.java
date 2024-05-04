@@ -1,4 +1,4 @@
-package org.example.aspect;
+package org.example.springt1task.aspect;
 
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -14,7 +14,7 @@ import java.util.concurrent.CompletableFuture;
 @Slf4j
 public class AsyncRunnerAspect {
 
-    @Pointcut("execution(@com.example.springt1task.annotation.Asynchronously public void add*(..))")
+    @Pointcut("execution(@org.example.springt1task.annotation.Asynchronously public void add*(..))")
     public void asyncRunnerPointcut(){
     }
 

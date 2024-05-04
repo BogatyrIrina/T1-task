@@ -1,12 +1,12 @@
-package org.example.service;
+package org.example.springt1task.service;
 
-import org.example.annotation.Asynchronously;
-import org.example.annotation.PreInvoke;
-import org.example.annotation.SuccessLogging;
-import org.example.annotation.Valid;
-import org.example.model.Plant;
-import org.example.model.PlantException;
-import org.example.model.RoleType;
+import org.example.springt1task.annotation.Asynchronously;
+import org.example.springt1task.annotation.PreInvoke;
+import org.example.springt1task.annotation.SuccessLogging;
+import org.example.springt1task.annotation.Valid;
+import org.example.springt1task.model.Plant;
+import org.example.springt1task.model.PlantException;
+import org.example.springt1task.model.RoleType;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;

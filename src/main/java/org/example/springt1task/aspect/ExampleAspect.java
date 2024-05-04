@@ -1,4 +1,4 @@
-package org.example.aspect;
+package org.example.springt1task.aspect;
 
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.annotation.After;
@@ -13,18 +13,23 @@ import org.springframework.stereotype.Component;
 @Slf4j
 public class ExampleAspect {
     @Pointcut("execution(public void info())")
-    public void beforePointcut() {};
+    public void beforePointcut(){}
 
     @Pointcut("execution(public void info())")
-    public void afterPointcut() {};
+    public void afterPointcut(){}
 
-    @Before("beforePointcut")
-    public void beforeMethod() {
+    @Before("beforePointcut()")
+    public void beforeMethod(){
         log.info("before method info");
     }
 
-    @After("afterPointcut")
-    public void afterMethod() {
+    @After("afterPointcut()")
+    public void afterMethod(){
         log.info("after method info");
     }
+
+//    @Before("execution(* org.example.model.Info.method2())")
+//    public void beforePointcutMethod2Call(){
+//        System.out.println("Метод2 вызван из метода1");
+//    }
 }

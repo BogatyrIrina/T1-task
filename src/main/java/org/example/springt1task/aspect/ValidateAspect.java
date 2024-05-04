@@ -1,11 +1,11 @@
-package org.example.aspect;
+package org.example.springt1task.aspect;
 
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
-import org.example.model.Plant;
-import org.example.model.PlantException;
+import org.example.springt1task.model.Plant;
+import org.example.springt1task.model.PlantException;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 

@@ -1,4 +1,4 @@
-package org.example.utils;
+package org.example.springt1task.utils;
 
 public class ThreadUtils {
     private ThreadUtils() {

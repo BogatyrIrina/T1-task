@@ -1,6 +1,6 @@
-package org.example.model;
+package org.example.springt1task.model;
 
-import org.example.annotation.Throw;
+import org.example.springt1task.annotation.Throw;
 
 @Throw
 public class PlantException extends RuntimeException {

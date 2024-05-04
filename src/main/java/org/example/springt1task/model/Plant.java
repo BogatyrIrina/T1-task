@@ -1,9 +1,9 @@
-package org.example.model;
+package org.example.springt1task.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.example.annotation.Model;
+import org.example.springt1task.annotation.Model;
 
 @Data
 @AllArgsConstructor

@@ -1,4 +1,4 @@
-package org.example.model;
+package org.example.springt1task.model;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;

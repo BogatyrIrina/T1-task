@@ -1,17 +1,15 @@
-package org.example;
+package org.example.springt1task;
 
 import lombok.RequiredArgsConstructor;
-import org.example.model.Info;
-import org.example.model.Plant;
-import org.example.service.PlantService;
-import org.example.utils.ThreadUtils;
-import org.example.utils.UserContext;
+import org.example.springt1task.model.Plant;
+import org.example.springt1task.service.PlantService;
+import org.example.springt1task.utils.ThreadUtils;
+import org.example.springt1task.utils.UserContext;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
 
-import java.net.SocketTimeoutException;
 import java.util.List;
 
 @SpringBootApplication

@@ -1,4 +1,4 @@
-package org.example.utils;
+package org.example.springt1task.utils;
 
 import lombok.Data;
 

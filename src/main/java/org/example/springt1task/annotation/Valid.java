@@ -1,4 +1,4 @@
-package org.example.annotation;
+package org.example.springt1task.annotation;
 
 
 import java.lang.annotation.ElementType;

@@ -1,4 +1,4 @@
-package org.example.model;
+package org.example.springt1task.model;
 
 public enum RoleType {
     ADMIN, USER
